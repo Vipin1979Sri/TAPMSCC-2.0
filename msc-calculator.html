@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TA Marketing Support Calculator</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Travel Armour Logo">
+  </header>
+  <div id="shareable-content">
+    <div class="container">
+      <h2>Marketing Support Charge Calculator</h2>
+      <form id="mscForm">
+        <label>Premium (₹):</label>
+        <input type="text" id="inputPremium">
+        <label>MSC %:</label>
+        <input type="text" id="inputMSC">
+        <button type="submit">Calculate</button>
+      </form>
+
+      <div id="calcResults" class="calculator"></div>
+      </div>
+  </div>
+
+  <footer>
+    <button onclick="location.href='index.html'">← Back to Premium Calculator</button>
+    <button onclick="shareViaEmail()">Email</button>
+    <button onclick="shareViaWhatsApp()">WhatsApp</button>
+    <button onclick="downloadAsPNG()">Download</button>
+    <div style="flex-basis: 100%; text-align: center; margin-top: 10px;">Office No.- 502, 5th Floor, Ansal Tower, 38, Nehru Place, New Delhi-110019 | ✉ support@travelarmour.in | +91 98715 89634</div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    window.onload = function () {
+      const savedPremium = localStorage.getItem('selectedPremiumForMSC');
+      if (savedPremium) {
+        document.getElementById('inputPremium').value = savedPremium;
+      } else {
+        document.getElementById('inputPremium').value = 0;
+      }
+      document.getElementById('inputMSC').value = 0; // Reset MSC % to 0 on load
+    };
+
+    document.getElementById('mscForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const premium = parseFloat(inputPremium.value);
+      const msc = parseFloat(inputMSC.value);
+
+      const basicPrice = premium / 1.18;
+      const gstAmount = premium - basicPrice; // Calculate GST amount
+      const mscAmt = (basicPrice * msc) / 100;
+      const tds = mscAmt * 0.02;
+      const net = premium - mscAmt + tds;
+
+      document.getElementById('calcResults').innerHTML = `
+        <table>
+          <tr><td><strong>Premium:</strong></td><td> ₹${premium.toFixed(0)}</td></tr>
+          <tr><td><strong>Basic Price:</strong></td><td> ₹${basicPrice.toFixed(0)}</td></tr>
+          <tr><td><strong>GST (18%):</strong></td><td> ₹${gstAmount.toFixed(0)}</td></tr>
+          <tr><td><strong>Marketing Support Charge:</strong></td><td> ₹${mscAmt.toFixed(0)}</td></tr>
+          <tr><td><strong>TDS (2%):</strong></td><td> ₹${tds.toFixed(0)}</td></tr>
+          <tr class="highlight-row"><td><strong>Net Payable:</strong></td><td> ₹${net.toFixed(0)}</td></tr>
+        </table>
+      `;
+    });
+
+    function getCanvas() {
+      return html2canvas(document.getElementById('shareable-content'));
+    }
+
+    function shareViaEmail() {
+      // Direct image attachment via mailto: is not reliably supported.
+      // User can download the PNG and attach it manually.
+      const subject = "Travel Armour Premium Calculation";
+      const body = "Please find the premium calculation. (Image needs to be attached manually after downloading)";
+      window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    function shareViaWhatsApp() {
+      // Direct image attachment via WhatsApp Web API is not supported with data URLs.
+      // User can download the PNG and share it manually.
+      const text = "Travel Armour Premium Calculation. (Image needs to be shared manually after downloading)";
+      window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`);
+    }
+
+    function downloadAsPNG() {
+      getCanvas().then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'travel-armour-calculator.png';
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    }
+  </script>
+</body>
+</html>

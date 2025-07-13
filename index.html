@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta charset="UTF-8">
+    <title>TA Travel Insurance Premium Calculator</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Travel Armour Logo">
+  </header>
+  <div class="container">
+    <h2>Select Plan to Calculate Premium</h2>
+    <form id="premiumForm">
+      <label for="planSelect">Plan:</label>
+      <select id="planSelect" required></select>
+      <label for="ageSelect">Age:</label>
+      <select id="ageSelect" required><option>Select Age</option></select>
+      <label for="durationSelect">Duration:</label>
+      <select id="durationSelect" required><option>Select Duration</option></select>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="shareable-content">
+      <div id="results" class="result"></div>
+      <div id="doc-viewer" class="result" style="display: none;"></div>
+    </div>
+    </div>
+
+  <footer>
+    <button onclick="location.href='msc-calculator.html'">Go to Marketing Support Calculator →</button>
+    <button onclick="shareViaEmail()">Email</button>
+    <button onclick="shareViaWhatsApp()">WhatsApp</button>
+    <button onclick="downloadAsPNG()">Download</button>
+    <div style="flex-basis: 100%; text-align: center; margin-top: 10px;">Office No.- 502, 5th Floor, Ansal Tower, 38, Nehru Place, New Delhi-110019 | ✉ support@travelarmour.in | +91 98715 89634</div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

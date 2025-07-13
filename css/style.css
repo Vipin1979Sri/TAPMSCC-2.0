@@ -1,0 +1,377 @@
+/* Modern UI CSS */
+:root {
+    --primary-color: #0056b3; /* Darker, more professional blue */
+    --secondary-color: #007bff; /* Brighter, more vibrant blue */
+    --text-color: #212529; /* Darker text for better readability */
+    --background-light: #f0f2f5; /* Light grey-blue */
+    --background-medium: #e9ecef; /* Slightly darker grey-blue */
+    --surface-color: #ffffff; /* Pure white for cards */
+    --border-color: #ced4da; /* Softer border color */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* Lighter, more subtle shadow */
+    --shadow-medium: rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow */
+    --border-radius: 12px;
+    --spacing-unit: 8px;
+    --font-size-base: 16px;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+    --font-size-large: 1.25rem;
+    --font-size-regular: 1rem;
+    --font-size-small: 0.875rem;
+    --line-height-base: 1.6;
+    --line-height-heading: 1.2;
+}
+
+/* Basic Reset & Typography */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--font-size-base);
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins */
+    background: linear-gradient(to right, var(--background-light), var(--background-medium));
+    color: var(--text-color);
+    line-height: var(--line-height-base);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    color: var(--surface-color);
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px var(--shadow-medium); /* Enhanced shadow */
+}
+
+header img {
+    height: 100px; /* Increased for better visibility */
+    max-width: 100%;
+    margin-right: var(--spacing-unit);
+}
+
+header div {
+    text-align: right;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-base);
+    flex-grow: 1;
+}
+
+/* Container */
+.container {
+    padding: calc(var(--spacing-unit) * 5);
+    max-width: 800px; /* Increased max-width for better spacing */
+    width: 90%; /* Responsive width */
+    margin: calc(var(--spacing-unit) * 6) auto; /* Slightly more vertical margin */
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 25px var(--shadow-medium); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-grow: 1; /* Allows container to grow */
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px var(--shadow-medium); /* Enhanced hover shadow */
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: calc(var(--spacing-unit) * 4);
+    text-align: center;
+    line-height: var(--line-height-heading);
+    font-weight: 600; /* Make headings a bit bolder */
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 3); /* Increased gap */
+}
+
+label {
+    font-size: var(--font-size-regular);
+    margin-bottom: calc(var(--spacing-unit) * -1);
+    font-weight: 500; /* Slightly bolder labels */
+}
+
+select, input[type="text"] {
+    padding: calc(var(--spacing-unit) * 1.5);
+    border: 1px solid var(--border-color);
+    border-radius: var(--spacing-unit);
+    font-size: var(--font-size-regular);
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    box-shadow: inset 0 1px 3px var(--shadow-light); /* Subtle inner shadow */
+}
+
+select:focus, input[type="text"]:focus {
+    border-color: var(--secondary-color); /* Highlight with secondary color on focus */
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(var(--secondary-color), 0.25); /* Stronger focus ring */
+}
+
+button {
+    background: var(--primary-color);
+    color: var(--surface-color);
+    padding: 1em 1.5em; /* Slightly more padding */
+    border: none;
+    border-radius: var(--spacing-unit);
+    font-size: var(--font-size-large);
+    font-weight: 600; /* Bolder button text */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 10px var(--shadow-light); /* Button shadow */
+}
+
+form button {
+    margin-top: var(--spacing-unit);
+}
+
+button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px); /* More pronounced lift */
+    box-shadow: 0 6px 15px var(--shadow-medium); /* Stronger hover shadow */
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px var(--shadow-light); /* Pressed state shadow */
+}
+
+/* Results and Calculator Display */
+.result, .calculator {
+    text-align: center;
+    border: 1px solid var(--border-color);
+    padding: calc(var(--spacing-unit) * 3);
+    margin-top: calc(var(--spacing-unit) * 4);
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px var(--shadow-light); /* Consistent shadow with container */
+}
+
+.result div {
+    margin-bottom: var(--spacing-unit);
+    text-align: center; /* Center align text in result divs */
+    line-height: var(--line-height-base);
+}
+
+.result table, .calculator table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: calc(var(--spacing-unit) * 3); /* Increased margin */
+    line-height: var(--line-height-base);
+}
+
+.result th, .result td, .calculator th, .calculator td {
+    padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+    text-align: center; /* Center align text in result table cells */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result th {
+    background-color: var(--background-light); /* Light background for table headers */
+    font-weight: 600; /* Bolder table headers */
+    color: var(--primary-color);
+}
+
+.result tr:nth-child(even) {
+    background-color: var(--background-light); /* Zebra striping */
+}
+
+.result tr:hover {
+    background-color: #e2f0ff; /* Light blue on hover for table rows */
+    cursor: pointer;
+}
+
+.result tr:last-child td, .calculator tr:last-child td {
+    border-bottom: none;
+}
+
+.result tr.selected-row {
+    background-color: #cce5ff; /* More prominent light blue for selected row */
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.highlight-row {
+    background-color: #d4edda; /* A light green for highlight */
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Document Viewer */
+#doc-viewer {
+    margin-top: calc(var(--spacing-unit) * 3);
+    text-align: center;
+}
+
+#doc-viewer img,
+#doc-viewer iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px var(--shadow-medium); /* Consistent shadow */
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--surface-color);
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 4);
+    text-align: center;
+    box-shadow: 0 -4px 12px var(--shadow-medium); /* Enhanced shadow */
+    margin-top: auto; /* Pushes footer to the bottom */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(var(--spacing-unit) * 2); /* Increased gap */
+    font-size: var(--font-size-small);
+}
+
+footer button {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Center the text horizontally */
+    gap: var(--spacing-unit);
+    background: var(--secondary-color); /* Different color for footer buttons */
+    padding: 0.6em 1em; /* Slightly smaller padding for footer buttons */
+    font-size: var(--font-size-small); /* Smaller font for footer buttons */
+    font-weight: 500;
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+footer button:hover {
+    background: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-top: calc(var(--spacing-unit) * 2);
+    display: block;
+    text-align: center;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        margin-bottom: var(--spacing-unit);
+        margin-right: 0;
+    }
+
+    header div {
+        text-align: center;
+    }
+
+    .container {
+        margin: calc(var(--spacing-unit) * 4) auto;
+        padding: calc(var(--spacing-unit) * 3);
+        width: 95%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: var(--spacing-unit) * 1.5;
+    }
+
+    footer button {
+        width: 80%; /* Make buttons wider on small screens */
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        padding: calc(var(--spacing-unit) * 2);
+    }
+
+    header img {
+        height: 60px;
+    }
+
+    .container {
+        padding: calc(var(--spacing-unit) * 2);
+        margin: var(--spacing-unit) * 3 auto;
+    }
+
+    h2 { 
+        font-size: 1.75rem; 
+        margin-bottom: calc(var(--spacing-unit) * 3);
+    }
+
+    select, input[type="text"], button {
+        padding: calc(var(--spacing-unit) * 1.2);
+    }
+
+    .result table, .calculator table {
+        font-size: var(--font-size-small);
+    }
+
+    .result th, .result td, .calculator th, .calculator td {
+        padding: var(--spacing-unit);
+    }
+}
+
+/* Clear Form Button */
+.clear-button {
+    background: #6c757d; /* A neutral grey color */
+}
+
+.clear-button:hover {
+    background: #5a6268; /* Darker grey on hover */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #dc3545; /* Bootstrap danger red */
+    font-weight: 500;
+    text-align: center;
+    margin-top: var(--spacing-unit) * 2;
+    padding: var(--spacing-unit) * 2;
+    border: 1px solid #dc3545;
+    border-radius: var(--border-radius);
+    background-color: #f8d7da; /* Light red background */
+}
