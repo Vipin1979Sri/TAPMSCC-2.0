@@ -2155,54 +2155,290 @@
     "plan": "iSingle Plan Excluding USA Canada",
     "coverage": "$50,000",
     "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
-    "duration": ["15-21 Days", "22-28 Days", "29-35 Days", "36-47 Days", "48-60 Days", "61-75 Days", "76-90 Days", "91-105 Days", "106-120 Days", "121-140 Days", "141-160 Days", "161-180 Days", "365 Days"],
+    "duration": ["15 Days", "30 Days", "45 Days", "60 Days", "90 Days", "120 Days", "150 Days", "180 Days", "365 Days"],
     "premium": {
       "1-40 Yrs": {
+        "15 Days": 793,
+        "30 Days": 1097,
+        "45 Days": 1269,
+        "60 Days": 1604,
+        "90 Days": 2209,
+        "120 Days": 2820,
+        "150 Days": 4031,
+        "180 Days": 4071,
+        "365 Days": 11524
+      },
+      "41-60 Yrs": {
+        "15 Days": 890,
+        "30 Days": 1269,
+        "45 Days": 1463,
+        "60 Days": 1866,
+        "90 Days": 2528,
+        "120 Days": 3363,
+        "150 Days": 4730,
+        "180 Days": 4777,
+        "365 Days": 13276
+      },
+      "61-70 Yrs": {
+        "15Days": 1550,
+        "30 Days": 2257,
+        "45 Days": 2902,
+        "60 Days": 3827,
+        "90 Days": 6170,
+        "120 Days": 8460,
+        "150 Days": 12172,
+        "180 Days": 12808,
+        "365 Days": 33036
+      }
+    },
+    "doc": "assets/iSingle.png"
+  },
+  {
+    "plan": "365 Days - iSilver Plan Including US/Canada",
+    "coverage": "$50,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": ["365 Days"],
+    "premium": {
+      "1-40 Yrs": {"365 Days": 20300},
+      "41-60 Yrs": {"365 Days": 25354},
+      "61-70 Yrs": {"365 Days": 55818}
+    },
+    "doc": "assets/365iSilverCvr.png"
+    },
+    {
+    "plan": "365 Days - iSilver Plan Including US/Canada",
+    "coverage": "$100,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": ["365 Days"],
+    "premium": {
+      "1-40 Yrs": {"365 Days": 28618},
+      "41-60 Yrs": {"365 Days": 34336},
+      "61-70 Yrs": {"365 Days": 67090}
+    },
+    "doc": "assets/365iSilverCvr.png"
+    },
+    {
+    "plan": "365 Days - iSilver Plan Including US/Canada",
+    "coverage": "$250,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": ["365 Days"],
+    "premium": {
+      "1-40 Yrs": {"365 Days": 36378},
+      "41-60 Yrs": {"365 Days": 38210},
+      "61-70 Yrs": {"365 Days": 73690}
+    },
+    "doc": "assets/365iSilverCvr.png"
+    },
+    {
+    "plan": "365 Days - iSilver Plan Including US/Canada",
+    "coverage": "$500,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": ["365 Days"],
+    "premium": {
+      "1-40 Yrs": {"365 Days": 39800},
+      "41-60 Yrs": {"365 Days": 50002},
+      "61-70 Yrs": {"365 Days": 108430}
+    },
+    "doc": "assets/365iSilverCvr.png"
+    },
+    {
+    "plan": "365 Days - iSilver Plan Excluding US/Canada",
+    "coverage": "$50,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": ["365 Days"],
+    "premium": {
+      "1-40 Yrs": {"365 Days": 14873},
+      "41-60 Yrs": {"365 Days": 19706},
+      "61-70 Yrs": {"365 Days": 37227}
+    },
+    "doc": "assets/365iSilverCvr.png"
+    },
+    {
+    "plan": "365 Days - iSilver Plan Excluding US/Canada",
+    "coverage": "$100,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": ["365 Days"],
+    "premium": {
+      "1-40 Yrs": {"365 Days": 17563},
+      "41-60 Yrs": {"365 Days": 22774},
+      "61-70 Yrs": {"365 Days": 50268}
+    },
+    "doc": "assets/365iSilverCvr.png"
+    },
+    {
+    "plan": "365 Days - iSilver Plan Excluding US/Canada",
+    "coverage": "$250,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": ["365 Days"],
+    "premium": {
+      "1-40 Yrs": {"365 Days": 21993},
+      "41-60 Yrs": {"365 Days": 27187},
+      "61-70 Yrs": {"365 Days": 59406}
+    },
+    "doc": "assets/365iSilverCvr.png"
+    },
+    {
+    "plan": "365 Days - iSilver Plan Excluding US/Canada",
+    "coverage": "$500,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": ["365 Days"],
+    "premium": {
+      "1-40 Yrs": {"365 Days": 30680},
+      "41-60 Yrs": {"365 Days": 40604},
+      "61-70 Yrs": {"365 Days": 82246}
+    },
+    "doc": "assets/365iSilverCvr.png"
+    },
+    {
+    "plan": "iLite Plan Excluding USA Canada",
+    "coverage": "$50,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": [
+      "1-4 Days", "5-6 Days", "7-8 Days", "9-12 Days", "13-14 Days", "15-21 Days",
+      "22-28 Days", "29-35 Days", "36-47 Days", "48-60 Days", "61-75 Days", "76-90 Days",
+      "91-105 Days", "106-120 Days", "121-140 Days", "141-160 Days", "161-180 Days", "365 Days"
+    ],
+    "premium": {
+      "1-40 Yrs": {
+        "1-4 Days": 422,
+        "5-6 Days": 465,
+        "7-8 Days": 499,
+        "9-12 Days": 650,
+        "13-14 Days": 721,
+        "15-21 Days": 757,
+        "22-28 Days": 849,
+        "29-30 Days": 890,
+        "31-35 Days": 1107,
+        "36-47 Days": 1269,
+        "48-60 Days": 1399,
+        "61-75 Days": 1690,
+        "76-90 Days": 1935,
+        "91-105 Days": 2410,
+        "106-120 Days": 2728,
+        "121-140 Days": 2870,
+        "141-160 Days": 3380,
+        "161-180 Days": 3438,
+        "365 Days": 8901
+      },
+      "41-60 Yrs": {
+        "1-4 Days": 430,
+        "5-6 Days": 511,
+        "7-8 Days": 738,
+        "9-12 Days": 746,
+        "13-14 Days": 753,
         "15-21 Days": 793,
         "22-28 Days": 882,
-        "29-35 Days": 1097,
-        "36-47 Days": 1269,
-        "48-60 Days": 1604,
+        "29-30 Days": 964,
+        "31-35 Days": 1269,
+        "36-47 Days": 1604,
+        "48-60 Days": 1734,
         "61-75 Days": 1830,
         "76-90 Days": 2209,
         "91-105 Days": 2796,
         "106-120 Days": 2820,
         "121-140 Days": 3171,
-        "141-160 Days": 4031,
+        "141-160 Days": 3681,
         "161-180 Days": 4071,
-        "365 Days": 11524
-      },
-      "41-60 Yrs": {
-        "15-21 Days": 890,
-        "22-28 Days": 1005,
-        "29-35 Days": 1269,
-        "36-47 Days": 1463,
-        "48-60 Days": 1866,
-        "61-75 Days": 2120,
-        "76-90 Days": 2528,
-        "91-105 Days": 3333,
-        "106-120 Days": 3363,
-        "121-140 Days": 3762,
-        "141-160 Days": 4730,
-        "161-180 Days": 4777,
-        "365 Days": 13276
+        "365 Days": 9496
       },
       "61-70 Yrs": {
-        "15-21 Days": 1550,
-        "22-28 Days": 1891,
-        "29-35 Days": 2257,
-        "36-47 Days": 2902,
-        "48-60 Days": 3827,
-        "61-75 Days": 4785,
-        "76-90 Days": 6170,
-        "91-105 Days": 7622,
-        "106-120 Days": 8460,
-        "121-140 Days": 10967,
-        "141-160 Days": 12172,
-        "161-180 Days": 12808,
-        "365 Days": 33036
+        "1-4 Days": 641,
+        "5-6 Days": 633,
+        "7-8 Days": 622,
+        "9-12 Days": 809,
+        "13-14 Days": 970,
+        "15-21 Days": 1033,
+        "22-28 Days": 1203,
+        "29-30 Days": 1411,
+        "31-35 Days": 1593,
+        "36-47 Days": 1830,
+        "48-60 Days": 2180,
+        "61-75 Days": 2642,
+        "76-90 Days": 3063,
+        "91-105 Days": 3705,
+        "106-120 Days": 4267,
+        "121-140 Days": 4736,
+        "141-160 Days": 4980,
+        "161-180 Days": 5910,
+        "365 Days": 12508
       }
     },
-    "doc": "assets/iSingle.png"
+    "doc": "assets/iLiteCrv.png"
+  },
+  {
+    "plan": "iLite Plan including USA Canada",
+    "coverage": "$50,000",
+    "age": ["1-40 Yrs", "41-60 Yrs", "61-70 Yrs"],
+    "duration": [
+      "1-4 Days", "5-6 Days", "7-8 Days", "9-12 Days", "13-14 Days", "15-21 Days",
+      "22-28 Days", "29-35 Days", "36-47 Days", "48-60 Days", "61-75 Days", "76-90 Days",
+      "91-105 Days", "106-120 Days", "121-140 Days", "141-160 Days", "161-180 Days", "365 Days"
+    ],
+    "premium": {
+      "1-40 Yrs": {
+        "1-4 Days": 652,
+        "5-6 Days": 751,
+        "7-8 Days": 979,
+        "9-12 Days": 1077,
+        "13-14 Days": 1088,
+        "15-21 Days": 1229,
+        "22-28 Days": 1471,
+        "29-30 Days": 1689,
+        "31-35 Days": 1899,
+        "36-47 Days": 2143,
+        "48-60 Days": 2804,
+        "61-75 Days": 3847,
+        "76-90 Days": 4638,
+        "91-105 Days": 5528,
+        "106-120 Days": 5576,
+        "121-140 Days": 6394,
+        "141-160 Days": 7531,
+        "161-180 Days": 7605,
+        "365 Days": 16490
+      },
+      "41-60 Yrs": {
+        "1-4 Days": 798,
+        "5-6 Days": 863,
+        "7-8 Days": 1061,
+        "9-12 Days": 1183,
+        "13-14 Days": 1254,
+        "15-21 Days": 1413,
+        "22-28 Days": 1707,
+        "29-30 Days": 1969,
+        "31-35 Days": 2223,
+        "36-47 Days": 2517,
+        "48-60 Days": 3272,
+        "61-75 Days": 4405,
+        "76-90 Days": 5244,
+        "91-105 Days": 6272,
+        "106-120 Days": 6602,
+        "121-140 Days": 7638,
+        "141-160 Days": 8659,
+        "161-180 Days": 8939,
+        "365 Days": 20438
+      },
+      "61-70 Yrs": {
+        "1-4 Days": 1090,
+        "5-6 Days": 1087,
+        "7-8 Days": 1225,
+        "9-12 Days": 1395,
+        "13-14 Days": 1586,
+        "15-21 Days": 1781,
+        "22-28 Days": 2179,
+        "29-30 Days": 2529,
+        "31-35 Days": 2871,
+        "36-47 Days": 3265,
+        "48-60 Days": 4208,
+        "61-75 Days": 5521,
+        "76-90 Days": 6456,
+        "91-105 Days": 7760,
+        "106-120 Days": 8654,
+        "121-140 Days": 10126,
+        "141-160 Days": 10915,
+        "161-180 Days": 11607,
+        "365 Days": 27254
+      }
+    },
+    "doc": "assets/iLiteCrv.png"
   }
 ]
